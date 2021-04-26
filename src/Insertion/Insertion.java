@@ -23,9 +23,11 @@ public class Insertion {
         return root;
     }
 
+
     public void inorder() {
         inorder(this.root);
     }
+
 
     private void inorder(BstNode root) {
         if (root != null) {
@@ -58,4 +60,25 @@ public class Insertion {
             System.out.println();
         }
     }
+
+    public boolean search(int searchelement) {
+        return search(this.root,searchelement);
+    }
+
+    private boolean search(BstNode root, int searchElemnt) {
+        if (root == null) {
+            return false;
+        } else if (root.getData() == searchElemnt) {
+            return true;
+
+        } else if (root.getData() < searchElemnt) {
+            return search(root.getRight(), searchElemnt);
+
+        }
+    else return search(root.getLeft(),searchElemnt);
+
+    }
+
 }
+
+

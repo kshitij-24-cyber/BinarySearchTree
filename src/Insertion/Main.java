@@ -11,6 +11,9 @@ public class Main {
         Bstroot.insert(97);
         Bstroot.insert(103);
         Bstroot.bfs();
+
+        System.out.println(Bstroot.search(103));
+
     }
 
 }
